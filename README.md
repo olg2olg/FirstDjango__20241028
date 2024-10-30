@@ -39,6 +39,8 @@ http://127.0.0.1:8000/
 
 https://github.com/olg2olg/FirstDjango_2024_10_28
 
+https://github.com/olg2olg/FirstDjango__20241028
+
 Миграция:
 1)изменить класс Таблицы БД
 2)python manage.py makemigrations
