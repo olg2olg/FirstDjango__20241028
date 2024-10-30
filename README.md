@@ -5,8 +5,14 @@
 2. `source django_venv/bin/activate`
 3. `pip install -r requirements.txt`
 4. `python manage.py migrate`
-5. `python manage.py loaddata items.json`
+5. `python manage.py loaddata ./fixtures/items.json`
 6. `python manage.py runserver`
+
+## Выгрузка и загрузка данных из БД
+### Выгрузить данные из БД
+python manage.py dumpdata MainApp --indent 4 > ./fixtures/items.json
+### Загрузить данные из БД
+python manage.py loaddata ./fixtures/items.json
 
 ## Дополнительно
 1. Полезное дополнение для шаблонов `Django`
@@ -41,15 +47,15 @@ https://github.com/olg2olg/FirstDjango_2024_10_28
 
 https://github.com/olg2olg/FirstDjango__20241028
 
-Миграция:
-1)изменить класс Таблицы БД
-2)python manage.py makemigrations
-3)python manage.py migrate
+## Миграция:
+1. изменить класс Таблицы БД
+2. python manage.py makemigrations
+3. python manage.py migrate
  
-Выгрузить и загрузить данные из БД:
-python manage.py dumpdata --help
-python manage.py dumpdata MainApp --indent 4 > items.json
-cat items.json
-vi items.json
-python manage.py loaddata items.json
+## Выгрузить и загрузить данные из БД:
+1. python manage.py dumpdata --help
+2. python manage.py dumpdata MainApp --indent 4 > ./fixtures/items.json
+3. cat items.json
+4. vi items.json
+5. python manage.py loaddata items.json
 
