@@ -29,7 +29,7 @@
         .item a{
             text-decoration: none;
             color: black;
-            text-align: justify;
+            text-align: justufy;
         }
         .items {
             width: 100%;
@@ -39,7 +39,7 @@
             max-width: 1200px; /*ширина drib-контейнера */
             justify-content: center;
             justify-items: center;
-            column-gap: 30px; /* Размещаем карточку по центру*/
+            column-gap 30px; /* Размещаем карточку по центру*/
             row-gap: 40px; /* Отступ между колонками*/
             margin: 0 auto; /* Отступ между рядами*/
         }
@@ -53,17 +53,10 @@
       
     <h2> Список товаров </h2>
 
-    <dif class="items">
+    <ol>
         {% for item in items %}
-            <div class="item">
-                <a href="/item/{{ item.id }}"> 
-                    <p class="item_name">{{ item.name }} 
-                    <p>Бренд: {{ item.brand }} </p>
-                    <p>Описание товара:</p>
-                    <p>{{ item.description }} </p>
-                </a>
-            </div>
+            <li><a href="/item/{{ item.id }}"> {{ item.name }} </a></li>
         {% endfor %}
-    </div>
+    </ol>
 </body>
 </html>
