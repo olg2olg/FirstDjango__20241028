@@ -1,18 +1,13 @@
-{% extends "base.html" %}
-
-{% load static %}
-
-{% block title %}
-    Items page
-{% endblock %}
-
-{% block style %}
-    {{ block.super }}
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
-{% endblock %}
-
-{% block content %}
-    {{ block.super }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Items list </title>
+</head>
+<body>
+    <header>
+        / <a href="/"> Home </a> / <a href="/items"> Items </a> / <a href="/about"> About </a>
+    </header>  
       
     <h2> Список товаров </h2>
 
@@ -28,4 +23,5 @@
             </div>
         {% endfor %}
     </div>
-{% endblock %}    
+</body>
+</html>
