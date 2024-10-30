@@ -37,4 +37,16 @@
     row-gap: 40px; /* Отступ между колонками*/
     margin: 0 auto; /* Отступ между рядами*/
 }
-
+.container {
+    display: flex;
+}
+.ul_no_mark {
+    list-style-type: none;
+}
+.div_color{
+    border: 1px solid #000;
+    width: 10px;
+    height: 10px;
+    margin-top: 3px;
+    float: left;
+}

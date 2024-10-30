@@ -91,11 +91,18 @@ def get_item(request, item_id:int):
 
     """ По указанному id возвращаем элемент из БД"""
     try:
-        item = Item.objects.get(pk=item_id)
+        item = Item.objects.get(id=item_id) #pk
+        colors = []
+        #Проверяем, что у элемента есть хоть одни цвет
+        if item.colors.exists():
+            colors = item.colors.all()
     except ObjectDoesNotExist:
         return HttpResponseNotFound(f'Товар с id={item_id} не найден')
     else:
-        context = { "item": item }
+        context = { 
+            "item": item,
+            "colors": colors
+            }
         return render(request, "item_page.html", context)
 
 
